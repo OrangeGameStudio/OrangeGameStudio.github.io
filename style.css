@@ -7,7 +7,7 @@ background: RGB(249, 201, 16); /* Цвет фона */
 box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 padding: 10px;
 font-size: 200%;
-width: 320px;
+width: 200px;
 }
 p.none {
   font-size: 200%;
