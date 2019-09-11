@@ -1,5 +1,10 @@
 
+<style type="test/css">
+  input.second {
+    padding-left: 15px;
+  }
 
+</style>
 
 
 <script type="text/javascript">
@@ -7,13 +12,13 @@
  var canThrow1 = true;
  var canThrow2 = true;
  var result1, result2;
- 
+
  function compare()
  {
     if (!canThrow1 && !canThrow2)
 	{
 	   var co = document.getElementById('input_3');
-	 
+
 	  if (result1 > result2)
 	  {
 		co.value = "Игрок 1 пабидил!!!!";
@@ -23,50 +28,50 @@
 	    if (result1 < result2)
 	    {
 		  co.value = "Игрок 2 пабидил!!!!";
-	    } 
+	    }
 		else
 		{
 		  co.value = "ОБА ЛОХИ!!!!";
 		}
       }
-	  
+
 	  document.getElementById('b3').hidden = false;
 	}
-	
+
  }
- 
+
  function fuu1()
  {
      var r = getRandomInt(1, 7);
 	 var i1 = document.getElementById('input_1');
-	 
+
 	 i1.value = r;
 	 result1 = r;
-	 
+
 	 var b1 =  document.getElementById('b1');
 	 b1.disabled = true;
      canThrow1 = false;
-	 
+
 	 compare();
  }
- 
- 
+
+
  function fuu2()
  {
      var r = getRandomInt(1, 7);
 	 var i1 = document.getElementById('input_2');
-	 
+
 	 i1.value = r;
 	 result2 = r;
-	 
+
      var b2 =  document.getElementById('b2');
 	 b2.disabled = true;
 	 canThrow2 = false;
-	 
+
 	 compare();
  }
- 
- 
+
+
  function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -85,6 +90,6 @@ function new_game()
 <button onclick="fuu2()" id="b2">бросить блинский кубик 2</button>
 <br>
 <input id="input_1">
-<input id="input_2">
+<input id="input_2" name="second">
 <input id="input_3">
 <button onclick="new_game()" id="b3" hidden = "true">сыграйте ещё если не зассали!</button>
